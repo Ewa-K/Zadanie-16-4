@@ -4,11 +4,11 @@ import Todo from './Todo';
 
 const TodoList = props => (
 	<div>
-		{this.props.list.map((el, index) => (
+		{props.list.map((el, index) => (
 			<Todo
 				key={index}
 				name={el.text}
-				clickHandler={() => this.props.removeTodoHandler(el.id)}
+				clickHandler={() => props.removeTodoHandler(el.id)}
 			/>
 		))}
 	</div>

@@ -1,17 +1,9 @@
 import React from 'react';
 
-class Todo extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        }
-
-         this.removeTodoHandler = this.removeTodoHandler.bind(this)
-    }
-
-    removeTodoHandler() {
-
-    }
-}
+const Todo = props => (
+	<div onClick={props.clickHandler}>
+		{props.name}
+	</div>
+)
 
 export default Todo;

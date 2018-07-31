@@ -9,7 +9,7 @@ const plugins =
         inject: 'body'
     }),
     new OptimizeJsPlugin({
-        sourceMap: false
+      sourceMap: false
     })
 ];
 

@@ -4,7 +4,7 @@ import style from './App.css';
 import Title from '../components/Title.js';
 import TodoForm from '../components/TodoForm.js';
 import TodoList from '../components/TodoList.js';
-import Todo from '../components/Todo.js';
+
 
 class App extends React.Component {
     constructor(props) {
@@ -43,8 +43,13 @@ class App extends React.Component {
 	    return (
 	        <div className={style.TodoApp}>
 	            <Title title={'Pozostało ' + this.state.data.length + ' zadań do wykonania.'}/>
-                <TodoForm/>
-                <TodoList/>
+                <TodoForm
+                    submitHandler={this.addTodo}
+                />
+                <TodoList
+                    list={this.state.data}
+                    removeTodoHandler={this.removeTodo}
+                />
 	        </div>
 	    );
 	}
